@@ -13,19 +13,18 @@ class PostIndex extends Component {
     return _.map(this.props.posts, (post, index) => {
       return (
         <li className="list-group-item" key={index}>
-          {post.id}
+          <p>{post.title}</p>
+          <p>{post.categories}</p>
+          <p>{post.content}</p>
         </li>
       );
     })
   }
   render() {
-    if (!Object.keys(this.props.posts).length) {
-      return <h2>Page Loading</h2>
-    }
     return (
       <div>
         <div className="text-xs-right">
-          <Link className="btn btn-primary" to="/posts/new">
+          <Link className="btn btn-primary" to="/posts/new" >
             Add a Post
              </Link>
         </div>
