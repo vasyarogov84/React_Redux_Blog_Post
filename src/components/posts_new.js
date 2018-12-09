@@ -30,7 +30,7 @@ class PostsNew extends Component {
   }
 
   render() {
-    console.log('props2', this.props);
+    //console.log('props2', this.props);
     const { handleSubmit } = this.props;
     return (
       <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
